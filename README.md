@@ -69,7 +69,7 @@ Class Components:
 
 ​	Good for just about everything else
 
-
+jgjg
 
 # Seasons 
 
@@ -79,4 +79,99 @@ get users physical location and date show different web page
 
 ​	Geolocation API: <https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API>
 
-​				
+
+
+
+
+#  Lifecycle
+
+Time:   constructor —> render —>  (after render content visible on screen) —>componentDidMount(Sit and wait for updates) —> componentDidUpdate —> componentWillUnmount
+
+
+
+###  constructor
+
+​	Good place to do onetime setup
+
+###  render	
+
+​	Avoid doing anything besides returning JSX
+
+###  componentDidMount
+
+​	good place to do data loading 
+
+###  componentDidUpdate
+
+​	good place to do more dataloading when state/props change
+
+###  componentWillUnmount
+
+​	good place to do cleanup(especially for non-React stuff)
+
+
+
+
+
+#  Input & Form
+
+```HTML
+import React from 'react';
+
+class SearchBar extends React.Component {
+    state = { term: '' }
+
+    onSubmitForm = (event) => {
+        event.preventDefault();
+        this.props.onSubmit(this.state.term);
+    }
+
+    render() {
+        return (
+            <div className="ui segment">
+                <form onSubmit={ this.onSubmitForm } className="ui form">
+                    <div className="field">
+                        <label>Image Search</label>
+                        <input type="text" 
+                            value={this.state.term}
+                            onChange={ (e) => this.setState({term: e.target.value })} />
+                    </div>
+                    
+                </form>
+            </div>
+        );
+    }
+}
+
+export default SearchBar;
+
+```
+
+
+
+parent
+
+```HTML REACT
+import React from 'react';
+import SearchBar from './SearchBar';
+
+class App extends React.Component{
+    onSearchSubmit(term) {
+        console.log(term);
+    }
+
+    render() {
+        return (
+            <div className="ui container" style={{ marginTop: '10px' }}>
+            <SearchBar onSubmit={ this.onSearchSubmit }/>
+            </div>
+        )
+    }
+} 
+    
+
+export default App;
+
+
+```
+
