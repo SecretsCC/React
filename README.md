@@ -175,3 +175,48 @@ export default App;
 
 ```
 
+
+
+#  React Refs
+
+	#####  	Gives access to a single DOM element
+
+	#####  	we create refs in the constructor, assign them to instance variables, then pass to a particular JSX element as props
+
+
+
+
+
+#  Redux
+
+####  	what is Redux?
+
+​		State management library
+
+​		Makes creting complex applications easier
+
+​		Not required to create a React app
+
+​		Not explicitly designed to work with React!
+
+####  	Redux Cycle
+
+​		Action Creator  —> Action  —> dispathch —> Reducers —> State
+
+
+
+###  	React-redux
+
+​			Provider: make React commponent cannectable
+
+​			connect: build connect between Redux store & react store
+
+​			<http://taobaofed.org/blog/2016/08/18/react-redux-connect/>
+
+​	
+
+
+
+
+
+​	
