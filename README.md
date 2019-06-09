@@ -213,6 +213,14 @@ export default App;
 
 ​			<http://taobaofed.org/blog/2016/08/18/react-redux-connect/>
 
+
+
+#### 	Redux thunk 
+
+​		middlewire 
+
+
+
 ​	
 
 
