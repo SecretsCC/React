@@ -180,7 +180,7 @@ export default App;
 #  React Refs
 
 	#####  	Gives access to a single DOM element
-
+	
 	#####  	we create refs in the constructor, assign them to instance variables, then pass to a particular JSX element as props
 
 
@@ -221,7 +221,50 @@ export default App;
 
 
 
+
+
+##  Reducer
+
+	####  	Rules of Reducers
+
+1. Must return any value besides 'undefined'
+
+2. Produces 'state', or data to be used inside of your app using only previous state and the actions
+
+3. must not return reach 'out of itself' to decide what value to return
+
+4. must not mutate its input 'state' argument
+
+   
+
+
+
+
+
 ​	
+
+# ES6
+
+``` javascript
+const color = ['red','green']\
+
+//adding item
+[...color, 'blue'];
+['blue', ...colors];
+
+//remove item
+colors.fileter(color => color !== 'green');
+
+const profile = { name: 'Alex'};
+//add
+{ ...profile, sex: 'male'};
+//change
+{ ..profile, name: 'Jake'};
+
+
+```
+
+
 
 
 
